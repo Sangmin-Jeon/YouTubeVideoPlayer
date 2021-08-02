@@ -11,7 +11,7 @@ struct model {
     
     var title: String = ""
     var key: String = ""
-    var list: [String] = ["https://youtu.be/yB-QqnRkx8Q"]
+    var list: [String] = ["JL2PB7NJ090"]
 
 }
 
