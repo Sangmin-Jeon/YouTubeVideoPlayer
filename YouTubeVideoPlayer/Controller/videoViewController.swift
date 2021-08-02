@@ -22,7 +22,6 @@ class videoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        videoView.load(withVideoId: "yB-QqnRkx8Q", playerVars: playVarsDic)
         videoView.load(withVideoId: urlId, playerVars: playVarsDic)
     }
 
