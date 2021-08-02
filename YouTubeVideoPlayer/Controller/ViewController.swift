@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "URL 추가", message: "", preferredStyle: .alert)
         // alert textField 추가 >
         alert.addTextField { (myTextField) in
-            myTextField.placeholder = "YouTube Url:"
+            myTextField.placeholder = "YouTube Url"
         }
         // ok Btn >
         let ok = UIAlertAction(title: "OK", style: .default) { [self] (ok) in
@@ -38,13 +38,20 @@ class ViewController: UIViewController {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let videoViewController = segue.destination as? videoViewController else { return }
+        // indexPath 생성 >
+        let indexPath = listTableView.indexPathForSelectedRow
+        guard let rowOfIndexPath: Int = indexPath?.row else { return }
+        videoViewController.urlId = self.load.list[rowOfIndexPath]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         // navigationBtn 추가 >
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showMenu(_:)))
-        
         
     }
     
@@ -77,12 +84,9 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! videoTableViewCell
         // 썸네일 이미지 >
-        let fileURL = URL(string: "https://img.youtube.com/vi/yB-QqnRkx8Q/0.jpg")
+        let fileURL = URL(string: "https://img.youtube.com/vi/\(load.list[indexPath.row])/0.jpg")
         cell.sumNailImage.kf.setImage(with: fileURL)
         cell.videoTitle.text = load.list[indexPath.row]
         return cell
     }
-    
-    
 }
-
