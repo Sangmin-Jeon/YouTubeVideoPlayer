@@ -10,17 +10,17 @@ import YoutubePlayer_in_WKWebView
 
 class videoViewController: UIViewController {
     
-    // view의 비율: 16:9로 설정 
+    // view의 비율: 16:9로 설정 >
     @IBOutlet weak var videoView: WKYTPlayerView!
     
-    // playsinline
+    // playsinline >
     // 1: 기본 view에서 재생, 0: 전체화면에서 재생
     let playVarsDic = ["playsinline": 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        videoView.load(withVideoId: "tnGaCZZ5Z28", playerVars: playVarsDic)
+        videoView.load(withVideoId: "yB-QqnRkx8Q", playerVars: playVarsDic)
     }
 
 

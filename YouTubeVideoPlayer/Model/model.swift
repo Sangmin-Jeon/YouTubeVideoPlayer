@@ -9,8 +9,9 @@ import UIKit
 
 struct model {
     
-    var name: String = ""
-    var list: [String] = ["https://youtu.be/tnGaCZZ5Z28"]
+    var title: String = ""
+    var key: String = ""
+    var list: [String] = ["https://youtu.be/yB-QqnRkx8Q"]
 
 }
 

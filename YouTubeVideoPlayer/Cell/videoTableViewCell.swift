@@ -9,6 +9,9 @@ import UIKit
 
 class videoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sumNailImage: UIImageView!
+    @IBOutlet weak var videoTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
