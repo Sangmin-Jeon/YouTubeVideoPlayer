@@ -1,16 +1,20 @@
 PODS:
+  - Kingfisher (6.3.0)
   - YoutubePlayer-in-WKWebView (0.3.5)
 
 DEPENDENCIES:
+  - Kingfisher (~> 6.0)
   - YoutubePlayer-in-WKWebView (~> 0.3.0)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
     - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   YoutubePlayer-in-WKWebView: cfbf46da51d7370662a695a8f351e5fa1d3e1008
 
-PODFILE CHECKSUM: 7f42710d031149db330d0bfa8423afaa8f7b41e9
+PODFILE CHECKSUM: 02d6a8df9a79004b960b6f4ccd17bc2aad7db515
 
 COCOAPODS: 1.10.1
