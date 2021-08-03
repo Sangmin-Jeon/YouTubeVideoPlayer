@@ -26,9 +26,7 @@ class ViewController: UIViewController {
             load.list.append((alert.textFields?[0].text)!)
             print(load.list)
             listTableView.reloadData()
-            
-    
-            
+            date()
         }
         // cancel Btn >
         let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
@@ -44,12 +42,13 @@ class ViewController: UIViewController {
         listTableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
-    func date() -> String{
+    // 추가한 시간 표시 >
+    func date() {
         let nowDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         let str = dateFormatter.string(from: nowDate)
-        return str
+        load.time.append(str)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -118,6 +117,7 @@ extension ViewController: UITableViewDataSource {
         let fileURL = URL(string: "https://img.youtube.com/vi/\(load.list[indexPath.row])/0.jpg")
         cell.sumNailImage.kf.setImage(with: fileURL)
         cell.videoTitle.text = "Id: \(load.list[indexPath.row])"
+        cell.timeLabel.text = load.time[indexPath.row]
         return cell
     }
 }
