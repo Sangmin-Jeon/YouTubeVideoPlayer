@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
 
     }
+    // list 목록 제거 >.
+    func delete() {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let videoViewController = segue.destination as? videoViewController else { return }
@@ -64,6 +68,11 @@ class ViewController: UIViewController {
             self.addUrl()
         }
         menu.addAction(addUrlAction)
+        
+        let deleteAction = UIAlertAction(title: "delete", style: .default) { (action) in
+            self.delete()
+        }
+        menu.addAction(deleteAction)
 
         if let pc = menu.popoverPresentationController {
             pc.barButtonItem = sender
