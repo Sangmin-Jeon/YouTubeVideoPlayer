@@ -92,7 +92,6 @@ extension ViewController: UITableViewDelegate {
         listTableView.deselectRow(at: indexPath, animated: false)
     }
     
-    // 왼쪽으로 swipe해서 제거 >
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "휴지통") {
             (action, view, completion) in
@@ -128,5 +127,17 @@ extension ViewController: UITableViewDataSource {
         cell.videoTitle.text = "Id: \(load.list[indexPath.row])"
         cell.timeLabel.text = load.time[indexPath.row]
         return cell
+    }
+}
+
+// URl Id추출 정규식 >
+extension String {
+    var youTubeId: String? {
+        let typePattern = "(?:(?:\\.be\\/|embed\\/|v\\/|\\?v=|\\&v=|\\/videos\\/)|(?:[\\w+]+#\\w\\/\\w(?:\\/[\\w]+)?\\/\\w\\/))([\\w-_]+)"
+        let regex = try? NSRegularExpression(pattern: typePattern, options: .caseInsensitive)
+        return regex
+            .flatMap { $0.firstMatch(in: self, range: NSMakeRange(0, self.count)) }
+            .flatMap { Range($0.range(at: 1), in: self) }
+            .map { String(self[$0]) }
     }
 }
