@@ -37,9 +37,11 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
 
     }
-    // list 목록 제거 >.
-    func delete() {
-        
+    
+    // list 목록 제거 >
+    func delete(at indexPath: IndexPath) {
+        load.list.remove(at: indexPath.row)
+        listTableView.deleteRows(at: [indexPath], with: .automatic)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,11 +70,7 @@ class ViewController: UIViewController {
             self.addUrl()
         }
         menu.addAction(addUrlAction)
-        
-        let deleteAction = UIAlertAction(title: "delete", style: .default) { (action) in
-            self.delete()
-        }
-        menu.addAction(deleteAction)
+    
 
         if let pc = menu.popoverPresentationController {
             pc.barButtonItem = sender
@@ -84,7 +82,21 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     
-    
+    // 왼쪽으로 swipe해서 제거 >
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "휴지통") {
+            (action, view, completion) in
+            self.delete(at: indexPath)
+            completion(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        // cell전체를 swipe했을때 삭제함 >
+        configuration.performsFirstActionWithFullSwipe = true
+        
+        return configuration
+    }
 }
 
 extension ViewController: UITableViewDataSource {
