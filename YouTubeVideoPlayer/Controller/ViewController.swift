@@ -12,12 +12,10 @@ import YoutubePlayer_in_WKWebView
 class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
-    
     var load = model()
-    
+
     // Url추가 >
     func addUrl() {
-        
         let alert = UIAlertController(title: "URL 추가", message: "", preferredStyle: .alert)
         // alert textField 추가 >
         alert.addTextField { (myTextField) in
@@ -28,6 +26,9 @@ class ViewController: UIViewController {
             load.list.append((alert.textFields?[0].text)!)
             print(load.list)
             listTableView.reloadData()
+            
+    
+            
         }
         // cancel Btn >
         let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
@@ -35,13 +36,20 @@ class ViewController: UIViewController {
         alert.addAction(cancel)
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
-
     }
     
     // list 목록 제거 >
     func delete(at indexPath: IndexPath) {
         load.list.remove(at: indexPath.row)
         listTableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    func date() -> String{
+        let nowDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let str = dateFormatter.string(from: nowDate)
+        return str
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -109,7 +117,7 @@ extension ViewController: UITableViewDataSource {
         // 썸네일 이미지 >
         let fileURL = URL(string: "https://img.youtube.com/vi/\(load.list[indexPath.row])/0.jpg")
         cell.sumNailImage.kf.setImage(with: fileURL)
-        cell.videoTitle.text = load.list[indexPath.row]
+        cell.videoTitle.text = "Id: \(load.list[indexPath.row])"
         return cell
     }
 }

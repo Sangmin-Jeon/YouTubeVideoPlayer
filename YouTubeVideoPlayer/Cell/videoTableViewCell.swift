@@ -11,10 +11,13 @@ class videoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sumNailImage: UIImageView!
     @IBOutlet weak var videoTitle: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        timeLabel.textColor = .gray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -35,26 +35,35 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-Ol-afe">
-                                                    <rect key="frame" x="166" y="32" width="228" height="19"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="154" y="11" width="51.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT8-wn-707">
+                                                    <rect key="frame" x="154" y="45" width="38" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <color key="highlightedColor" systemColor="labelColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dxG-Ol-afe" firstAttribute="leading" secondItem="fJa-f0-dUv" secondAttribute="trailing" constant="20" id="23g-YT-rFF"/>
-                                                <constraint firstItem="dxG-Ol-afe" firstAttribute="top" secondItem="GMA-3I-Rfv" secondAttribute="top" constant="32" id="63a-om-5WV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="dxG-Ol-afe" secondAttribute="trailing" id="7zT-16-dYr"/>
+                                                <constraint firstItem="dxG-Ol-afe" firstAttribute="top" secondItem="GMA-3I-Rfv" secondAttribute="top" constant="11" id="0WG-hQ-UOh"/>
+                                                <constraint firstItem="mT8-wn-707" firstAttribute="leading" secondItem="fJa-f0-dUv" secondAttribute="trailing" constant="8" symbolic="YES" id="3O1-gW-kg4"/>
+                                                <constraint firstItem="dxG-Ol-afe" firstAttribute="leading" secondItem="fJa-f0-dUv" secondAttribute="trailing" constant="8" symbolic="YES" id="5wH-7F-22m"/>
                                                 <constraint firstAttribute="bottom" secondItem="fJa-f0-dUv" secondAttribute="bottom" id="ALH-J6-efq"/>
                                                 <constraint firstItem="fJa-f0-dUv" firstAttribute="top" secondItem="GMA-3I-Rfv" secondAttribute="top" id="AOO-ri-TWO"/>
+                                                <constraint firstItem="mT8-wn-707" firstAttribute="top" secondItem="dxG-Ol-afe" secondAttribute="bottom" constant="10" id="HsY-0d-PJr"/>
                                                 <constraint firstAttribute="trailing" secondItem="fJa-f0-dUv" secondAttribute="trailing" constant="268" id="IoV-OS-52P"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mT8-wn-707" secondAttribute="trailing" symbolic="YES" id="Kl3-Ks-5o0"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dxG-Ol-afe" secondAttribute="trailing" constant="20" symbolic="YES" id="fg7-cg-Dgy"/>
                                                 <constraint firstItem="fJa-f0-dUv" firstAttribute="leading" secondItem="GMA-3I-Rfv" secondAttribute="leading" constant="20" symbolic="YES" id="hjn-cG-wp8"/>
                                                 <constraint firstItem="fJa-f0-dUv" firstAttribute="leading" secondItem="GMA-3I-Rfv" secondAttribute="leadingMargin" id="mtZ-pk-xPF"/>
-                                                <constraint firstAttribute="bottom" secondItem="dxG-Ol-afe" secondAttribute="bottom" constant="32" id="yXb-C8-BGk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="sumNailImage" destination="fJa-f0-dUv" id="2XY-8d-vWV"/>
+                                            <outlet property="timeLabel" destination="mT8-wn-707" id="iVF-xg-HnS"/>
                                             <outlet property="videoTitle" destination="dxG-Ol-afe" id="7b3-sH-68N"/>
                                             <segue destination="w90-qt-Sxu" kind="show" id="pvT-I5-ifa"/>
                                         </connections>
@@ -137,6 +146,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

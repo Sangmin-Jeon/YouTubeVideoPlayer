@@ -9,8 +9,7 @@ import UIKit
 
 struct model {
     
-    var title: String = ""
-    var key: String = ""
+    var time: String = ""
     var list: [String] = ["tnGaCZZ5Z28"]
 
 }
