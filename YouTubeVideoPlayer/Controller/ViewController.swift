@@ -23,9 +23,15 @@ class ViewController: UIViewController {
         }
         // ok Btn >
         let ok = UIAlertAction(title: "OK", style: .default) { [self] (ok) in
-            
-            load.list.append((alert.textFields?[0].text)!.youTubeId!)
-            print(load.list)
+            // 잘못된 주소 입력시 알림 >
+            guard let youTubeId = (alert.textFields?[0].text)!.youTubeId else {
+                let failAlert = UIAlertController(title: "잘못된 주소", message: nil, preferredStyle: .alert)
+                let fail = UIAlertAction(title: "OK", style: .default, handler: nil)
+                failAlert.addAction(fail)
+                self.present(failAlert, animated: true, completion: nil)
+                return
+            }
+            load.list.append(youTubeId)
             listTableView.reloadData()
             date()
         }
