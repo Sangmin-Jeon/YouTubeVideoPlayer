@@ -77,7 +77,6 @@ class ViewController: UIViewController {
             self.addUrl()
         }
         menu.addAction(addUrlAction)
-    
 
         if let pc = menu.popoverPresentationController {
             pc.barButtonItem = sender
@@ -102,8 +101,14 @@ extension ViewController: UITableViewDelegate {
         }
         deleteAction.image = UIImage(systemName: "trash")
         
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-        // cell전체를 swipe했을때 삭제함 >
+        let menuAction = UIContextualAction(style: .normal, title: "기타") {
+            (action, view, completion) in
+            completion(true)
+        }
+        menuAction.image = UIImage(systemName: "ellipsis")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, menuAction])
+        // cell전체를 swipe했을때 삭제 >
         configuration.performsFirstActionWithFullSwipe = true
         
         return configuration
