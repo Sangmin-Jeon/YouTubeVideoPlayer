@@ -9,8 +9,8 @@ import UIKit
 
 struct model {
     
-    var time: String = ""
-    var list: [String] = ["tnGaCZZ5Z28"]
+    var time: [String] = []
+    var list: [String] = []
 
 }
 
