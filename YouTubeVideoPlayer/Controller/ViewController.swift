@@ -88,6 +88,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    // 선택한 cell표시 해제 >
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        listTableView.deselectRow(at: indexPath, animated: false)
+    }
     
     // 왼쪽으로 swipe해서 제거 >
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
