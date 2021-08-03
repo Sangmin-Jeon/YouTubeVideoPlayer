@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         }
         // ok Btn >
         let ok = UIAlertAction(title: "OK", style: .default) { [self] (ok) in
-            load.list.append((alert.textFields?[0].text)!)
+            
+            load.list.append((alert.textFields?[0].text)!.youTubeId!)
             print(load.list)
             listTableView.reloadData()
             date()
