@@ -23,6 +23,6 @@
 
 * Swipe를 사용하여 cell삭제 및 전체 swipe기능 구현
    
-
+<img src="https://user-images.githubusercontent.com/59474775/128155675-bfb73b0f-19b9-4e70-8260-89207abe8d93.gif" height=550 >   
 
 
