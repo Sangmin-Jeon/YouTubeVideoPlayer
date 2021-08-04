@@ -13,7 +13,7 @@
   * Framework: UIKit   
   * Library: YoutubePlayer in WKWebView, Kingfisher
 * 구현한 내용
-  * YouTube영상 불러오기   
+  * YouTube영상 표시하기      
     처음 계획에는 [youtube-ios-player](https://github.com/youtube/youtube-ios-player-helper) 라이브러리를 사용하려 했으나 오랜 기간동안 업데이트가
     안되어 있고   
     **UIWebView**에 대한 대응도 미흡할것이라 생각하여 **WKWebView**로 개발 된 [YoutubePlayer in WKWebView](https://github.com/hmhv/YoutubePlayer-in-WKWebView) 를 
