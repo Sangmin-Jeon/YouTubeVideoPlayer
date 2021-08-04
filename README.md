@@ -15,8 +15,8 @@
   * Library: YoutubePlayer in WKWebView, Kingfisher
    
 * 구현한 기능
-  *
 
+   
 # Implementation  
    
 * URl로 영상으로 추가하고 해당 영상으로 재생하는 기능 구현   
