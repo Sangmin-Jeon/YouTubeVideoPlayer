@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         load.time.append(str)
     }
     
+    // videoViewController로 id전달
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let videoViewController = segue.destination as? videoViewController else { return }
         // indexPath 생성 >
@@ -100,6 +101,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // swipe해서 제거 >
         let deleteAction = UIContextualAction(style: .destructive, title: "휴지통") {
             (action, view, completion) in
             self.delete(at: indexPath)
@@ -107,6 +109,7 @@ extension ViewController: UITableViewDelegate {
         }
         deleteAction.image = UIImage(systemName: "trash")
         
+        // swipe 기타 >
         let menuAction = UIContextualAction(style: .normal, title: "기타") {
             (action, view, completion) in
             completion(true)

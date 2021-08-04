@@ -9,8 +9,8 @@ import UIKit
 
 struct model {
     
-    var time: [String] = []
-    var list: [String] = []
+    var time: [String] = [] // 현재시간 표시
+    var list: [String] = [] // URL id
 
 }
 
