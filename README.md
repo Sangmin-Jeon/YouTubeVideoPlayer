@@ -31,6 +31,7 @@
     TableView에 추가한 영상을 삭제할때 Swipe가능을 사용하였습니다.    
     `trailingSwipeActionsConfigurationForRowAt`메소드를 호출하여 delete메소드에 선택된 indexPath를 전달하였고   
     delete메소드에서 파라미터로 받은 indexPath로 remove메소드와 deleteRows를 호출하였습니다.   
+    `performsFirstActionWithFullSwipe` 메소드로 첫번째 swipe Action이 실행되어 제거되게 하였습니다.   
   * 영상 추가시간 표시
    
 * 개선사항
