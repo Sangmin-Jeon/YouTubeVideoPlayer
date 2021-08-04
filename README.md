@@ -6,12 +6,16 @@
    
 # Description   
    
+* 개인 프로젝트 >
 * 기간: 2021.07.31 ~  
+
 * Tech/framework used
   * Language: Swift
   * Framework: UIKit   
   * Library: YoutubePlayer in WKWebView, Kingfisher
-
+   
+* 구현한 기능
+  *
 
 # Implementation  
    
