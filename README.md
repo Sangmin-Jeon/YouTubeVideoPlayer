@@ -16,7 +16,7 @@
 
 # Implementation  
    
-## Feature   
+### Feature   
 * URl로 영상으로 추가하고 해당 영상으로 재생하는 기능 구현   
 <img src="https://user-images.githubusercontent.com/59474775/128144520-c5e3049f-031c-4632-9b11-033a79dfd345.gif" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128151240-640804d4-a346-478a-ad6d-5c513cb9f641.gif" height=550 >   
    
