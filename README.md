@@ -14,7 +14,7 @@
   * Library: YoutubePlayer in WKWebView, Kingfisher
 * 구현한 내용
   * 처음 계획에는 [youtube-ios-player](https://github.com/youtube/youtube-ios-player-helper) 라이브러리를 사용하려 했으나 오랜 기간동안 업데이트가
-    안되어 있고 **UIWebView**에 대한 대응도    미흡할것이라 생각하여 **WKWebView**로 개발 된 [YoutubePlayer in WKWebView](https://github.com/hmhv/YoutubePlayer-in-WKWebView) 를 
+    안되어 있고    **UIWebView**에 대한 대응도 미흡할것이라 생각하여 **WKWebView**로 개발 된 [YoutubePlayer in WKWebView](https://github.com/hmhv/YoutubePlayer-in-WKWebView) 를 
     사용했습니다.
   * **Kingfisher** 라이브러리를 사용하여 YouTube영상의 썸네일 이미지 불러오기.  
     해당 영상의 URl주소 고유 Key값으로 불러올수 있습니다. 
