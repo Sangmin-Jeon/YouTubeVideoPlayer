@@ -32,10 +32,11 @@
     `trailingSwipeActionsConfigurationForRowAt`메소드를 호출하여 delete메소드에 선택된 indexPath를 전달하였고   
     delete메소드에서 파라미터로 받은 indexPath로 remove메소드와 deleteRows를 호출하였습니다.   
     `performsFirstActionWithFullSwipe` 메소드로 첫번째 swipe Action이 실행되어 제거되게 하였습니다.   
-  * 영상 추가시간 표시
-   
+  * 영상 추가시간 표시   
+    영상을 추가했을때 추가한 시간을 cell에 나타내기 위해서 `DateFormatter`를 사용했습니다.   
+    `Alert` 에서 URl을 추가할때 cell의 textLabel로 값을 넘겨줍니다.
 * 개선사항
-
+   
 * 향후 계획
 
         
