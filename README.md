@@ -19,7 +19,7 @@
     안되어 있고   
     **UIWebView**에 대한 대응도 미흡할것이라 생각하여 **WKWebView**로 개발 된 [YoutubePlayer in WKWebView](https://github.com/hmhv/YoutubePlayer-in-WKWebView) 를 
     사용했습니다.
-  * **Kingfisher** 라이브러리를 사용하여 YouTube영상의 썸네일 이미지 불러오기.  
+  * **Kingfisher** 라이브러리를 사용하여 YouTube영상의 썸네일 이미지 불러오기     
     해당 영상의 URl주소 고유 Key값으로 불러올수 있습니다.
   * **Alert** 에 TextField추가하기  
     본 프로젝트에서는 NavigatoinBar에 버튼을 추가하여 Alert을 띄우고 TextField를 통해 URl데이터를 받아오는 방식으로 구현하였습니다.
