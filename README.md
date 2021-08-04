@@ -6,7 +6,7 @@
    
 ## Description   
    
-* 개인 프로젝트 >
+* 개인 프로젝트
 * 기간: 2021.07.31 ~  
 * Tech/framework used
   * Language: Swift
