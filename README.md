@@ -12,7 +12,8 @@
   * Language: Swift
   * Framework: UIKit   
   * Library: YoutubePlayer in WKWebView, Kingfisher
-* 구현한 기능
+* 구현한 내용
+  * 처음 계획에는 *youtube-ios-player* 라이브러리를 사용하려 했으나 
 
 ## Implementation  
    
