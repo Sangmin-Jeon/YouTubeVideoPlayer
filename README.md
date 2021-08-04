@@ -21,7 +21,8 @@
     사용했습니다.   
     영상을 표시할 `WKYTPlayerView`는 대부분의 영상이 16:9비율로 제작되기 때문에 16:9비율로 제약을 추가하였습니다.    
   * YouTube 썸네일Image 불러오기         
-    **Kingfisher** 라이브러리를 사용하여 YouTube영상의 썸네일 이미지를 불러왔습니다. 해당 영상의 URl주소 고유 Key값으로 불러올수 있습니다.
+    **Kingfisher** 라이브러리를 사용하여 YouTube영상의 썸네일 이미지를 불러왔습니다.   
+    해당 영상의 URl주소 고유 Key값으로 불러올수 있습니다.
   * **Alert** 에 TextField추가하기  
     본 프로젝트에서는 `NavigatoinBar`에 버튼을 추가하여 `Alert`을 띄우고 `TextField`를 통해 URl데이터를 받아오는 방식으로 구현하였습니다.   
     "ok" 버튼을 누르면 `TextField`에 작성한 URl에서 정규식을 이용하여 key값을 따로 분리 후 재사용성을 위하여 model에 저장 하였습니다.   
