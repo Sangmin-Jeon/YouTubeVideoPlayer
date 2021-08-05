@@ -27,8 +27,9 @@ class favoritViewController: UIViewController {
             guard let value = notification.userInfo?["title"] as? String else {
                 return
             }
-            // 중복되는 값이 없을때만 추가
+            // key값이 중복되지 않을때만 추가
             if !(load2.favoritList.contains(value)) {
+                // 없으면 추가
                 load2.favoritList.append(value)
                 date()
             }
