@@ -15,6 +15,7 @@ class videoTableViewCell: UITableViewCell {
     @IBOutlet weak var favoritBtn: UIButton!
     
     var toggle = false
+    var buttonAction : (() -> ())?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,12 +24,11 @@ class videoTableViewCell: UITableViewCell {
         timeLabel.textColor = .gray
         
         favoritBtn.setImage(UIImage(systemName: "star"), for: .normal)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -36,6 +36,7 @@ class videoTableViewCell: UITableViewCell {
     @IBAction func favoritBtnToggle(_ sender: Any) {
         toggle = !toggle
         if toggle {
+            buttonAction?()
             favoritBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
         } else {
             favoritBtn.setImage(UIImage(systemName: "star"), for: .normal)
