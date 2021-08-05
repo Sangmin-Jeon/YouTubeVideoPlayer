@@ -131,12 +131,20 @@ extension ViewController: UITableViewDataSource {
         cell.timeLabel.text = load.time[indexPath.row]
         // call Back메소드 호출 >
         // 즐겨찾기 버튼이 눌린 cell의 indexPath
-        cell.buttonAction = { currentCell in
+        cell.buttonAction = { [self] currentCell in
             let selectedIndexPath = tableView.indexPath(for: currentCell)!
-            print(self.load.list[selectedIndexPath.row])
+            // print(load.list[selectedIndexPath.row])
+            let videoTitle = load.list[selectedIndexPath.row]
+            // Notification post >
+            NotificationCenter.default.post(name: NSNotification.Name.videoTitleNotification, object: nil, userInfo: ["title":videoTitle])
         }
         return cell
     }
+}
+
+// NSNotification 이름 선언 >
+extension NSNotification.Name {
+    static let videoTitleNotification = NSNotification.Name("videoTitleNotification")
 }
 
 // URl Id추출 정규식 >
