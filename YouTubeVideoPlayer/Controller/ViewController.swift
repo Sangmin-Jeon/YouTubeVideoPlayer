@@ -109,14 +109,7 @@ extension ViewController: UITableViewDelegate {
         }
         deleteAction.image = UIImage(systemName: "trash")
         
-        // swipe 기타 >
-        let menuAction = UIContextualAction(style: .normal, title: "기타") {
-            (action, view, completion) in
-            completion(true)
-        }
-        menuAction.image = UIImage(systemName: "ellipsis")
-        
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, menuAction])
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         // cell전체를 swipe했을때 삭제 >
         configuration.performsFirstActionWithFullSwipe = true
         
