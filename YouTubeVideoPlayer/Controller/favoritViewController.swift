@@ -66,6 +66,7 @@ extension favoritViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoritCell", for: indexPath) as! favoritVideoTableViewCell
+        // 이미지 타이틀 추가 
         cell.videoLabel.text = "Id: \(load2.favoritList[indexPath.row])"
         let fileURL = URL(string: "https://img.youtube.com/vi/\(load2.favoritList[indexPath.row])/0.jpg")
         cell.videoImage.kf.setImage(with: fileURL)
