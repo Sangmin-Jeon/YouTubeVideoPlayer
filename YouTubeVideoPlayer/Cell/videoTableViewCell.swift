@@ -32,6 +32,7 @@ class videoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // 즐겨찾기 버튼
     @IBAction func favoritBtnToggle(_ sender: Any) {
         toggle = !toggle
         if toggle {
