@@ -136,10 +136,11 @@ extension ViewController: UITableViewDataSource {
         cell.sumNailImage.kf.setImage(with: fileURL)
         cell.videoTitle.text = "Id: \(load.list[indexPath.row])"
         cell.timeLabel.text = load.time[indexPath.row]
+        // call Back메소드 호출 >
         // 즐겨찾기 버튼이 눌린 cell의 indexPath
-        cell.buttonAction = { [unowned self] in
-            let selectedIndexPath = indexPath.row
-            print(load.list[selectedIndexPath])
+        cell.buttonAction = { currentCell in
+            let selectedIndexPath = tableView.indexPath(for: currentCell)!
+            print(self.load.list[selectedIndexPath.row])
         }
         return cell
     }

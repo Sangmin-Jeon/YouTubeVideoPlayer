@@ -15,7 +15,7 @@ class videoTableViewCell: UITableViewCell {
     @IBOutlet weak var favoritBtn: UIButton!
     
     var toggle = false
-    var buttonAction : (() -> ())?
+    var buttonAction : ((UITableViewCell) -> ())?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +36,7 @@ class videoTableViewCell: UITableViewCell {
     @IBAction func favoritBtnToggle(_ sender: Any) {
         toggle = !toggle
         if toggle {
-            buttonAction?()
+            buttonAction?(self)
             favoritBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
         } else {
             favoritBtn.setImage(UIImage(systemName: "star"), for: .normal)
