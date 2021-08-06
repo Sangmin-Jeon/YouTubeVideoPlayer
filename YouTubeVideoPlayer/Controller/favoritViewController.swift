@@ -21,7 +21,7 @@ class favoritViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        self.navigationItem.title = "⭐️ favorit Video"
+        self.navigationItem.title = "⭐️ favorit List"
         
         token =  NotificationCenter.default.addObserver(forName: NSNotification.Name.videoTitleNotification, object: nil, queue: OperationQueue.main) {  [self] (notification) in
             guard let value = notification.userInfo?["title"] as? String else {
