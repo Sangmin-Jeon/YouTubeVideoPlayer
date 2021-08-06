@@ -15,6 +15,15 @@ class favoritViewController: UIViewController {
     var token: NSObjectProtocol?
     
     var load2 = model()
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let videoViewController = segue.destination as? videoViewController else { return }
+        // indexPath 생성 >
+        let indexPath = favoritVideo.indexPathForSelectedRow
+        guard let rowOfIndexPath: Int = indexPath?.row else { return }
+        videoViewController.urlId = self.load2.favoritList[rowOfIndexPath]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

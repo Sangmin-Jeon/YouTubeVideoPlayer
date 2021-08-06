@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1x-gw-EOa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2707.2463768115945" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2964" y="434"/>
         </scene>
         <!--List-->
         <scene sceneID="6HY-ok-wm3">
@@ -227,6 +227,7 @@
                                             <outlet property="time" destination="OEp-Zh-Jwd" id="d3d-Nj-saZ"/>
                                             <outlet property="videoImage" destination="v0c-nX-4rw" id="fpV-d3-LRA"/>
                                             <outlet property="videoLabel" destination="iUU-fP-68j" id="3OO-1w-Bub"/>
+                                            <segue destination="w90-qt-Sxu" kind="show" id="z8Y-Fk-vMX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -293,6 +294,9 @@
             <point key="canvasLocation" x="1235" y="810"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="z8Y-Fk-vMX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
         <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
