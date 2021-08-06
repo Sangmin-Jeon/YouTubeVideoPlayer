@@ -36,7 +36,8 @@
   * 영상 추가시간 표시   
     영상을 추가했을때 추가한 시간을 cell에 나타내기 위해서 `DateFormatter`를 사용했습니다.   
     Alert에서 URl을 추가할때 cell의 `textLabel`로 값을 넘겨줍니다.   
-  * 즐겨찾기 추가
+  * 즐겨찾기 추가   
+    <img src="https://user-images.githubusercontent.com/59474775/128484560-5925816a-c699-4c96-8b08-a8955162b6a2.gif" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128484634-db3c8460-ee1b-4f64-9ea0-9e29d831dde5.gif" height=500 >   
 
 * 개선사항   
   * 잘못된 URl을 입력시 영상과 썸네일을 받아오지 못하는 것을 확인 하였습니다.    
