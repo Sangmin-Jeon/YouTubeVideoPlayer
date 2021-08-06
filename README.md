@@ -54,6 +54,6 @@
 ### Feature   
 * URl로 영상으로 추가하고 해당 영상으로 재생하는 기능   
 
-<img src="https://user-images.githubusercontent.com/59474775/128144520-c5e3049f-031c-4632-9b11-033a79dfd345.gif" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128151240-640804d4-a346-478a-ad6d-5c513cb9f641.gif" height=550 >   
+<img src="https://user-images.githubusercontent.com/59474775/128484388-b765a0db-1b04-4dee-9c15-708f59eb455b.gif" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128151240-640804d4-a346-478a-ad6d-5c513cb9f641.gif" height=550 >   
 
 
