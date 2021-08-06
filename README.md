@@ -32,6 +32,7 @@
     `trailingSwipeActionsConfigurationForRowAt`메소드를 호출하여 delete메소드에 선택된 indexPath를 전달하였고   
     delete메소드에서 파라미터로 받은 indexPath로 remove메소드와 deleteRows를 호출하였습니다.   
     `performsFirstActionWithFullSwipe` 메소드로 첫번째 swipe Action이 실행되어 제거되게 하였습니다.   
+    <img src="https://user-images.githubusercontent.com/59474775/128484751-eac15054-4e67-4ff7-947a-55278f6449c0.gif" height=500 >   
   * 영상 추가시간 표시   
     영상을 추가했을때 추가한 시간을 cell에 나타내기 위해서 `DateFormatter`를 사용했습니다.   
     Alert에서 URl을 추가할때 cell의 `textLabel`로 값을 넘겨줍니다.   
@@ -55,7 +56,4 @@
 
 <img src="https://user-images.githubusercontent.com/59474775/128144520-c5e3049f-031c-4632-9b11-033a79dfd345.gif" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128151240-640804d4-a346-478a-ad6d-5c513cb9f641.gif" height=550 >   
 
-* Swipe를 사용하여 cell삭제 및 전체 swipe기능
-   
-<img src="https://user-images.githubusercontent.com/59474775/128155675-bfb73b0f-19b9-4e70-8260-89207abe8d93.gif" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128156047-1fb85143-66f2-4408-8d5b-2ecec636605f.gif" height=550 >
 
