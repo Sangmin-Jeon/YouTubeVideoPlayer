@@ -144,7 +144,7 @@
         <scene sceneID="6HY-ok-wm3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LUQ-Gc-6QG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="g6F-cs-rfq"/>
+                    <tabBarItem key="tabBarItem" title="List" image="play.rectangle" catalog="system" selectedImage="play.rectangle.fill" id="g6F-cs-rfq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HRZ-dA-qWk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -277,7 +277,7 @@
         <scene sceneID="1cP-Lo-JwE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wj3-21-aRx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorit List" id="M2B-CP-FIn"/>
+                    <tabBarItem key="tabBarItem" title="Favorit List" image="star" catalog="system" selectedImage="star.fill" id="M2B-CP-FIn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7UA-AM-3f5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -294,8 +294,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.rectangle" catalog="system" width="128" height="93"/>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

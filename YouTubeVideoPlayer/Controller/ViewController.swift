@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
 
     // Url추가 >
-    func addUrl() {
+    @objc func addUrl() {
         let alert = UIAlertController(title: "URL 추가", message: "", preferredStyle: .alert)
         // alert textField 추가 >
         alert.addTextField { (myTextField) in
@@ -75,24 +75,9 @@ class ViewController: UIViewController {
         self.navigationItem.title = "🎬 My YouTube List"
 
         // navigationBtn 추가 >
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showMenu(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addUrl))
     }
     
-
-    @objc func showMenu(_ sender: UIBarButtonItem) {
-        let menu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let addUrlAction = UIAlertAction(title: "Add URL", style: .default) { (action) in
-            self.addUrl()
-        }
-        menu.addAction(addUrlAction)
-
-        if let pc = menu.popoverPresentationController {
-            pc.barButtonItem = sender
-        }
-        
-        present(menu, animated: true, completion: nil)
-    }
 }
 
 extension ViewController: UITableViewDelegate {
