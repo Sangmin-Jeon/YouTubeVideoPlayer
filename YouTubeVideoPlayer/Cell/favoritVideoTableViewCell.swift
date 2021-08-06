@@ -18,7 +18,7 @@ class favoritVideoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        favoritBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        favoritBtn.setImage(UIImage(systemName: "star.circle.fill"), for: .normal)
         
         time.textColor = .gray
 

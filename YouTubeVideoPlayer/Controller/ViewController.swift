@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var listTableView: UITableView!
     var load = model()
 
+
     // Url추가 >
     func addUrl() {
         let alert = UIAlertController(title: "URL 추가", message: "", preferredStyle: .alert)
@@ -71,13 +72,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.navigationItem.title = "My YouTube List"
+        self.navigationItem.title = "🎬 My YouTube List"
 
         // navigationBtn 추가 >
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showMenu(_:)))
-        
     }
     
+
     @objc func showMenu(_ sender: UIBarButtonItem) {
         let menu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -133,7 +134,6 @@ extension ViewController: UITableViewDataSource {
         // 즐겨찾기 버튼이 눌린 cell의 indexPath
         cell.buttonAction = { [self] currentCell in
             let selectedIndexPath = tableView.indexPath(for: currentCell)!
-            // print(load.list[selectedIndexPath.row])
             let videoTitle = load.list[selectedIndexPath.row]
             // Notification post >
             NotificationCenter.default.post(name: NSNotification.Name.videoTitleNotification, object: nil, userInfo: ["title":videoTitle])
