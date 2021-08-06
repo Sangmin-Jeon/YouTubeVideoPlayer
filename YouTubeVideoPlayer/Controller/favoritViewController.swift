@@ -56,7 +56,9 @@ class favoritViewController: UIViewController {
 }
 
 extension favoritViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        favoritVideo.deselectRow(at: indexPath, animated: false)
+    }
 }
 
 extension favoritViewController: UITableViewDataSource {
