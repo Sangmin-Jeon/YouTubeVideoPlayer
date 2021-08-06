@@ -35,8 +35,8 @@ class videoTableViewCell: UITableViewCell {
     // 즐겨찾기 버튼
     @IBAction func favoritBtnToggle(_ sender: Any) {
         toggle = !toggle
+        buttonAction?(self)
         if toggle {
-            buttonAction?(self)
             favoritBtn.setImage(UIImage(systemName: "star.fill"), for: .normal)
         } else {
             favoritBtn.setImage(UIImage(systemName: "star"), for: .normal)

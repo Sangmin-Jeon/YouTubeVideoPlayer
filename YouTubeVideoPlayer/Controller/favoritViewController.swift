@@ -16,7 +16,6 @@ class favoritViewController: UIViewController {
     
     var load2 = model()
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let videoViewController = segue.destination as? videoViewController else { return }
         // indexPath 생성 >
@@ -36,11 +35,16 @@ class favoritViewController: UIViewController {
             guard let value = notification.userInfo?["title"] as? String else {
                 return
             }
+
             // key값이 중복되지 않을때만 추가
             if !(load2.favoritList.contains(value)) {
                 // 없으면 추가
                 load2.favoritList.append(value)
                 date()
+            } else {
+                guard let index = load2.favoritList.firstIndex(of: value) else { return }
+                load2.favoritList.remove(at: index)
+                favoritVideo.deleteRows(at: [[0,index]], with: .automatic)
             }
             favoritVideo.reloadData()
         }
