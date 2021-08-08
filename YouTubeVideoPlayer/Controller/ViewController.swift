@@ -59,6 +59,10 @@ class ViewController: UIViewController {
         load.time.append(str)
     }
     
+    private var searchController: UISearchController = {
+            return UISearchController(searchResultsController: nil)
+        }()
+    
     // videoViewController로 id전달
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let videoViewController = segue.destination as? videoViewController else { return }
@@ -76,7 +80,32 @@ class ViewController: UIViewController {
 
         // navigationBtn 추가 >
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addUrl))
+        
+        
+//        let searchController = UISearchController(searchResultsController: nil)
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search Video"
+        self.navigationItem.searchController = searchController
+
     }
+    
+}
+
+extension ViewController: UISearchControllerDelegate {
+    
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+            searchController.isActive = false
+            print(searchText)
+        }
+
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            print("cancel")
+        }
     
 }
 

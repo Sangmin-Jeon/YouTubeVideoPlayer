@@ -70,7 +70,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="fz8-kG-G82" secondAttribute="trailing" constant="26" id="Mx8-eP-vhJ"/>
                                                 <constraint firstItem="fz8-kG-G82" firstAttribute="top" secondItem="GMA-3I-Rfv" secondAttribute="top" constant="39" id="XIC-02-1ah"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dxG-Ol-afe" secondAttribute="trailing" constant="20" symbolic="YES" id="fg7-cg-Dgy"/>
-                                                <constraint firstItem="fJa-f0-dUv" firstAttribute="leading" secondItem="GMA-3I-Rfv" secondAttribute="leading" constant="20" symbolic="YES" id="hjn-cG-wp8"/>
                                                 <constraint firstItem="fJa-f0-dUv" firstAttribute="leading" secondItem="GMA-3I-Rfv" secondAttribute="leadingMargin" id="mtZ-pk-xPF"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -217,7 +216,6 @@
                                                 <constraint firstItem="10j-QD-dZk" firstAttribute="top" secondItem="tXA-rT-AWq" secondAttribute="top" constant="39" id="gEk-vj-my5"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iUU-fP-68j" secondAttribute="trailing" constant="20" symbolic="YES" id="hgM-rS-Btx"/>
                                                 <constraint firstAttribute="trailing" secondItem="v0c-nX-4rw" secondAttribute="trailing" constant="268" id="jIg-y7-Ia1"/>
-                                                <constraint firstItem="v0c-nX-4rw" firstAttribute="leading" secondItem="tXA-rT-AWq" secondAttribute="leading" constant="20" symbolic="YES" id="rI7-mm-LW6"/>
                                                 <constraint firstItem="iUU-fP-68j" firstAttribute="top" secondItem="tXA-rT-AWq" secondAttribute="top" constant="11" id="txB-3o-YtN"/>
                                                 <constraint firstItem="OEp-Zh-Jwd" firstAttribute="top" secondItem="iUU-fP-68j" secondAttribute="bottom" constant="10" id="yUa-9e-odE"/>
                                             </constraints>
@@ -295,7 +293,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="z8Y-Fk-vMX"/>
+        <segue reference="pvT-I5-ifa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
