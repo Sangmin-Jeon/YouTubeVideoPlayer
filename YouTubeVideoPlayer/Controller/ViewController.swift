@@ -72,7 +72,11 @@ class ViewController: UIViewController {
         // indexPath 생성 >
         let indexPath = listTableView.indexPathForSelectedRow
         guard let rowOfIndexPath: Int = indexPath?.row else { return }
-        videoViewController.urlId = self.load.list[rowOfIndexPath]
+        if isFiltering {
+            videoViewController.urlId = self.load.filiteredList[rowOfIndexPath]
+        } else {
+            videoViewController.urlId = self.load.list[rowOfIndexPath]
+        }
     }
 
     override func viewDidLoad() {
@@ -87,6 +91,8 @@ class ViewController: UIViewController {
         // search 기능 >
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search Video"
+        // 검색 활성화시 Cell선택 안되는 문제 해결 >
+        searchController.dimsBackgroundDuringPresentation = false
         self.navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         
