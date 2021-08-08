@@ -38,6 +38,7 @@
     Alert에서 URl을 추가할때 cell의 `textLabel`로 값을 넘겨줍니다.   
   * 즐겨찾기 추가   
     <img src="https://user-images.githubusercontent.com/59474775/128484560-5925816a-c699-4c96-8b08-a8955162b6a2.gif" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128484634-db3c8460-ee1b-4f64-9ea0-9e29d831dde5.gif" height=500 >   
+  * 검색기능 추가
 
 * 개선사항   
   * 잘못된 URl을 입력시 영상과 썸네일을 받아오지 못하는 것을 확인 하였습니다.    
@@ -48,7 +49,7 @@
   * 영상을 추가할때 영상제목을 URl의 key값으로 설정되게 하였습니다. 원본 영상의 제목으로 설정되게 합니다.
   * ~영상목록중 자주보는 영상은 즐겨찾기 표시를 하여 쉽게 찾을수 있도록 즐겨찾기 기능을 추가합니다.~
   * TableView의 Reordering기능을 추가합니다.
-  * 영상의 수가 많아질경우를 대비하여 검색 기능을 추가합니다.   
+  * ~영상의 수가 많아질경우를 대비하여 검색 기능을 추가합니다.~   
   
 ## Implementation  
    
