@@ -7,7 +7,7 @@
 ## Description   
    
 * 개인 프로젝트
-* 기간: 2021.07.31 ~  
+* 기간: 2021.07.31 ~ 2021.08.08 
 * Tech/framework used
   * Language: Swift
   * Framework: UIKit   
