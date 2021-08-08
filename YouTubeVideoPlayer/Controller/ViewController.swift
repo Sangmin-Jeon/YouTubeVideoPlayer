@@ -14,10 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var listTableView: UITableView!
     var load = model()
     
-//    var searchController: UISearchController = {
-//        return UISearchController(searchResultsController: nil)
-//    }()
-    
     var isFiltering: Bool {
         let searchController = self.navigationItem.searchController
         let isActive = searchController?.isActive ?? false
@@ -88,22 +84,24 @@ class ViewController: UIViewController {
         // navigationBtn 추가 >
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addUrl))
         
+        // search 기능 >
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search Video"
         self.navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        
     }
+    
     
 }
 
 extension ViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text?.lowercased() else { return }
-        self.load.filiteredList = self.load.list.filter { $0.lowercased().contains(text) }
+        self.load.filiteredList = self.load.list.filter { return $0.lowercased().contains(text) }
         
         self.listTableView.reloadData()
     }
-    
     
 }
 
@@ -111,6 +109,7 @@ extension ViewController: UITableViewDelegate {
     // 선택한 cell표시 해제 >
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         listTableView.deselectRow(at: indexPath, animated: false)
+
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -140,6 +139,7 @@ extension ViewController: UITableViewDataSource {
         
         if self.isFiltering {
             cell.videoTitle?.text = "Id: \(self.load.filiteredList[indexPath.row])"
+            // 썸네일 이미지 >
             let fileURL = URL(string: "https://img.youtube.com/vi/\(self.load.filiteredList[indexPath.row])/0.jpg")
             cell.sumNailImage.kf.setImage(with: fileURL)
         } else {
