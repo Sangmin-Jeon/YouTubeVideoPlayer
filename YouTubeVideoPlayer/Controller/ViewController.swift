@@ -13,6 +13,17 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     var load = model()
+    
+//    var searchController: UISearchController = {
+//        return UISearchController(searchResultsController: nil)
+//    }()
+    
+    var isFiltering: Bool {
+        let searchController = self.navigationItem.searchController
+        let isActive = searchController?.isActive ?? false
+        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+        return isActive && isSearchBarHasText
+    }
 
 
     // Url추가 >
@@ -59,10 +70,6 @@ class ViewController: UIViewController {
         load.time.append(str)
     }
     
-    private var searchController: UISearchController = {
-            return UISearchController(searchResultsController: nil)
-        }()
-    
     // videoViewController로 id전달
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let videoViewController = segue.destination as? videoViewController else { return }
@@ -81,31 +88,22 @@ class ViewController: UIViewController {
         // navigationBtn 추가 >
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addUrl))
         
-        
-//        let searchController = UISearchController(searchResultsController: nil)
-        searchController.delegate = self
-        searchController.searchBar.delegate = self
+        let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search Video"
         self.navigationItem.searchController = searchController
-
+        searchController.searchResultsUpdater = self
     }
     
 }
 
-extension ViewController: UISearchControllerDelegate {
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text?.lowercased() else { return }
+        self.load.filiteredList = self.load.list.filter { $0.lowercased().contains(text) }
+        
+        self.listTableView.reloadData()
+    }
     
-}
-
-extension ViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            guard let searchText = searchBar.text, !searchText.isEmpty else { return }
-            searchController.isActive = false
-            print(searchText)
-        }
-
-        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-            print("cancel")
-        }
     
 }
 
@@ -134,15 +132,23 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return load.list.count
+        return self.isFiltering ? self.load.filiteredList.count: self.load.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! videoTableViewCell
-        // 썸네일 이미지 >
-        let fileURL = URL(string: "https://img.youtube.com/vi/\(load.list[indexPath.row])/0.jpg")
-        cell.sumNailImage.kf.setImage(with: fileURL)
-        cell.videoTitle.text = "Id: \(load.list[indexPath.row])"
+        
+        if self.isFiltering {
+            cell.videoTitle?.text = "Id: \(self.load.filiteredList[indexPath.row])"
+            let fileURL = URL(string: "https://img.youtube.com/vi/\(self.load.filiteredList[indexPath.row])/0.jpg")
+            cell.sumNailImage.kf.setImage(with: fileURL)
+        } else {
+            cell.videoTitle.text = "Id: \(load.list[indexPath.row])"
+            // 썸네일 이미지 >
+            let fileURL = URL(string: "https://img.youtube.com/vi/\(load.list[indexPath.row])/0.jpg")
+            cell.sumNailImage.kf.setImage(with: fileURL)
+        }
+        
         cell.timeLabel.text = load.time[indexPath.row]
         // call Back메소드 호출 >
         // 즐겨찾기 버튼이 눌린 cell의 indexPath
