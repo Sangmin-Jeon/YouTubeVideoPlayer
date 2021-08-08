@@ -12,6 +12,6 @@ struct model {
     var time: [String] = [] // 현재시간 표시
     var list: [String] = [] // URL id
     var favoritList: [String] = [] // 즐겨찾기 리스트
-    var filiteredList: [String] = []
+    var filiteredList: [String] = [] // 검색 리스트
 }
 
