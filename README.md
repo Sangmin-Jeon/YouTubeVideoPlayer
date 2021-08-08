@@ -2,7 +2,7 @@
 
 * YouTube URl로 영상을 가져와서 리스트에 등록하고 해당 영상을 재생합니다.   
    
-<img src="https://user-images.githubusercontent.com/59474775/128149152-22a31a76-9cde-4b18-827a-b1c98601d9e2.png" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128163822-c7a89149-5ca3-47d9-9d2c-f195c49587d7.png" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128164207-fd2dc16e-abbc-4bb5-81e8-88047fc10620.png" height=550 >
+<img src="https://user-images.githubusercontent.com/59474775/128483712-6937a6f0-af59-4e09-9edd-2e68e82aef94.png" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128163822-c7a89149-5ca3-47d9-9d2c-f195c49587d7.png" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128483877-f25c7b9e-1d06-441b-bb55-a44c30274897.png" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128483940-4a33287f-2e50-4526-bf90-5b4e100fae37.png" height=500 >
    
 ## Description   
    
@@ -32,10 +32,12 @@
     `trailingSwipeActionsConfigurationForRowAt`메소드를 호출하여 delete메소드에 선택된 indexPath를 전달하였고   
     delete메소드에서 파라미터로 받은 indexPath로 remove메소드와 deleteRows를 호출하였습니다.   
     `performsFirstActionWithFullSwipe` 메소드로 첫번째 swipe Action이 실행되어 제거되게 하였습니다.   
+    <img src="https://user-images.githubusercontent.com/59474775/128484455-240f6da5-3670-4361-88f6-0f9c5c92332b.gif" height=500 >   
   * 영상 추가시간 표시   
     영상을 추가했을때 추가한 시간을 cell에 나타내기 위해서 `DateFormatter`를 사용했습니다.   
     Alert에서 URl을 추가할때 cell의 `textLabel`로 값을 넘겨줍니다.   
-  * 즐겨찾기 추가
+  * 즐겨찾기 추가   
+    <img src="https://user-images.githubusercontent.com/59474775/128484560-5925816a-c699-4c96-8b08-a8955162b6a2.gif" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128484634-db3c8460-ee1b-4f64-9ea0-9e29d831dde5.gif" height=500 >   
 
 * 개선사항   
   * 잘못된 URl을 입력시 영상과 썸네일을 받아오지 못하는 것을 확인 하였습니다.    
@@ -53,9 +55,6 @@
 ### Feature   
 * URl로 영상으로 추가하고 해당 영상으로 재생하는 기능   
 
-<img src="https://user-images.githubusercontent.com/59474775/128144520-c5e3049f-031c-4632-9b11-033a79dfd345.gif" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128151240-640804d4-a346-478a-ad6d-5c513cb9f641.gif" height=550 >   
+<img src="https://user-images.githubusercontent.com/59474775/128484388-b765a0db-1b04-4dee-9c15-708f59eb455b.gif" height=500 >  <img src="https://user-images.githubusercontent.com/59474775/128151240-640804d4-a346-478a-ad6d-5c513cb9f641.gif" height=500 >   
 
-* Swipe를 사용하여 cell삭제 및 전체 swipe기능
-   
-<img src="https://user-images.githubusercontent.com/59474775/128155675-bfb73b0f-19b9-4e70-8260-89207abe8d93.gif" height=550 >  <img src="https://user-images.githubusercontent.com/59474775/128156047-1fb85143-66f2-4408-8d5b-2ecec636605f.gif" height=550 >
 
