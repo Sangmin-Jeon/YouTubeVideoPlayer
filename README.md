@@ -25,7 +25,7 @@
     해당 영상의 URl주소 고유 Key값으로 불러올수 있습니다.
   * **Alert** 에 TextField추가하기  
     본 프로젝트에서는 NavigatoinBar에 버튼을 추가하여 Alert을 띄우고 `TextField`를 통해 URl데이터를 받아오는 방식으로 구현하였습니다.   
-    "ok" 버튼을 누르면 `TextField`에 작성한 URl에서 정규식을 이용하여 key값을 따로 분리 후 재사용성을 위하여 model에 저장 하였습니다.   
+    "ok" 버튼을 누르면 `TextField`에 작성한 URl에서 정규식을 이용하여 key값을 따로 분리 후 재사용성을 위하여 list배열에 저장 하였습니다.   
     해당 key값은 영상 불러오기, 썸네일 이미지 불러오기, 영상제목 표시 등에 사용됩니다.   
   * Swipe로 삭제하는 기능 구현   
     TableView에 추가한 영상을 삭제할때 Swipe가능을 사용하였습니다.    
