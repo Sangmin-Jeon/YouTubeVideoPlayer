@@ -38,7 +38,7 @@
     Alert에서 URl을 추가할때 cell의 `textLabel`로 값을 넘겨줍니다.   
   * 즐겨찾기 추가   
     Table View Cell에서 callBack메소드를 작성하고 Table View에서 호출하여 즐겨찾기 버튼의 상태를 감지   
-    NotificationCenter를 사용하여 해당 indexPath에 대한 정보를 즐겨찾기 controller에 알려줍니다.   
+    NotificationCenter를 사용하여 해당 indexPath에 대한 영상목록값을 즐겨찾기 controller에 알려줍니다.   
     즐겨찾기 추가, 해제 >   
     <img src="https://user-images.githubusercontent.com/59474775/128484560-5925816a-c699-4c96-8b08-a8955162b6a2.gif" height=500 > 
     <img src="https://user-images.githubusercontent.com/59474775/128484634-db3c8460-ee1b-4f64-9ea0-9e29d831dde5.gif" height=500 >   
